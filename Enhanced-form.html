@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced HTML Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+    }
+    form {
+      background: #f4f4f4;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    table, th, td {
+      border: 1px solid #999;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+    }
+    .form-section {
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Student Registration Portal</h1>
+</header>
+
+<main>
+  <section>
+    <h2>📋 Program Overview</h2>
+    <p>This form allows new students to register for the 2025 academic year.</p>
+
+    <ul>
+      <li>All fields marked with * are required</li>
+      <li>Ensure your email and ID number are valid</li>
+      <li>Submit clear scanned documents</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2>📑 Student Information Form</h2>
+    <form action="/submit" method="post" autocomplete="on">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend><strong>Personal Details</strong></legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+255..." required>
+
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="">-- Select Gender --</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </fieldset>
+
+      <!-- Program Selection -->
+      <fieldset>
+        <legend><strong>Program Preferences</strong></legend>
+
+        <label for="program">Choose Program *</label>
+        <select id="program" name="program" required>
+          <option value="">-- Select Program --</option>
+          <option>Economics</option>
+          <option>Statistics</option>
+          <option>Computer Science</option>
+        </select>
+
+        <label for="intake">Preferred Intake *</label>
+        <input type="month" id="intake" name="intake" required>
+
+        <label>Mode of Study *</label><br>
+        <input type="radio" id="fulltime" name="mode" value="Full-time" required>
+        <label for="fulltime">Full-time</label><br>
+        <input type="radio" id="parttime" name="mode" value="Part-time">
+        <label for="parttime">Part-time</label>
+      </fieldset>
+
+      <!-- Upload & Notes -->
+      <fieldset>
+        <legend><strong>Documents and Notes</strong></legend>
+
+        <label for="photo">Upload Passport Photo *</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
+
+        <label for="readonlyField">Student ID (readonly)</label>
+        <input type="text" id="readonlyField" value="2025-STUDENT" readonly>
+      </fieldset>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>📊 Program Statistics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Duration</th>
+          <th>Tuition (Tsh)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Economics</td>
+          <td>3 Years</td>
+          <td>3,000,000</td>
+        </tr>
+        <tr>
+          <td>Statistics</td>
+          <td>3 Years</td>
+          <td>3,200,000</td>
+        </tr>
+        <tr>
+          <td>Computer Science</td>
+          <td>4 Years</td>
+          <td>4,000,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+       <h2>🎥 Welcome Video</h2>
+  <video width="100%" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>🎧 University Anthem</h2>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 University Admission Office. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
